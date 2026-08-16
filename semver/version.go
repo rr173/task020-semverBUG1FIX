@@ -234,7 +234,7 @@ func Max(versions []Version) (Version, bool) {
 
 // Min returns the lowest-precedence version in the slice.
 func Min(versions []Version) (Version, bool) {
-	if versions == nil {
+	if len(versions) == 0 {
 		return Version{}, false
 	}
 	m := versions[0]
